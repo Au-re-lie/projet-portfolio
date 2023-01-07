@@ -192,7 +192,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <form action="send.php" method="POST" class="form" >
                   <div class="form-group">
                       <fieldset><legend><label class="lblform" for="nom">Nom</label></legend>
-                    <input class="inptform" type="text" id="name" name="name" value="<?php echo isset($_SESSION['monapp']['data_memory']['name']) ? $_SESSION['monapp']['data_memory']['name'] : ''; ?>" required></fieldset>
+                    <input class="inptform" type="text" id="name" name="name" !--value="<?php echo isset($_SESSION['monapp']['data_memory']['name']) ? $_SESSION['monapp']['data_memory']['name'] : ''; ?>"-- required></fieldset>
                   </div>
                    <div class="form-group">
                     <fieldset><legend><label class="lblform" for="email">Email</label></legend>
