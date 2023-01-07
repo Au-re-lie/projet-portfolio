@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+*{scroll-behavior: smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:sans-serif;
+}
+html{font-size:62.5%;}
+header{
+background:#f5f5f5;}
+body{
+font-size:1.6rem;
+font-family:roboto;
+background-color: #f7f8fa;
+}
+.wrapper{
+    display:flex;
+    max-width:100rem;
+    margin:auto;
+    padding: 0 2rem;
+    justify-content: space-between;
+    align-items: center;
+    }
+.wrapper a img{
+    height:15rem;
+    width:10rem;
+}
+nav ul{ 
+list-style:none;
+display:flex;
+justify-content:space-between;}
+nav ul li{ padding:0 20px; }
+nav ul li a{
+text-decoration: none;
+color:black;
+transition:.5s ease-in-out;
+}
+/*nav ul li a:link{color: grey;}*/
+nav ul li a:visited{color: black;}
+nav ul li a:hover{color: lightblue;}
+
+               /*  section 01*/
+section.oui{
+display:flex;
+flex-direction:row;
+}
+.corail{
+    justify-content: center;
+    object-fit:cover; 
+    height:84vh;
+    width:50%;
+}
+article.hippo{
+    background-image:url("../img/eauturquoise.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    width:50%;
+    height:84vh;
+    display:flex;
+}
+article.hippo img{
+  object-fit:cover; 
+    height:84vh;
+    width:50%;
+}
+article.hippo{
+    opacity:0.3;
+    transition:all 0.7s;
+}
+article.hippo:hover{
+    opacity:1;
+}
+article.hippo h2{ 
+    color:white;
+    font-size:4rem;
+    font-family:"playfair display"; 
+padding-bottom:3rem;}
+article.hippo p{
+    font-size: 1.6rem;
+    color:white;
+    text-align:center;
+}
+section.histoire{
+background-color:#f7f8fa;
+background-size: cover;
+height:60vh;
+margin-bottom:4rem;}
+article.histoire{
+color:grey;
+justify-content: center;
+}
+h1#exposition{ 
+    padding-top:3rem;
+    font-family: "playfair display";
+    font-size:5rem;
+    text-align:center;
+    padding-bottom:5rem;
+}
+h1#exposition p{
+    font-size:1.6rem;
+    text-align:center; 
+}
+.galerie{
+    padding-top:2rem;
+    height: 50vh;
+    display:flex;
+    justify-content:center;
+}
+.galerie img{object-fit:cover;}
+.galerie img: nth-child(1) {width:25%;}
+.galerie img: nth-child(2) {width:25%;}
+.galerie img: nth-child(3) {width:25%;}
+.galerie img: nth-child(4) {width:25%;}
+#adresse{
+    background:#f5f5f5;
+    padding: 5rem 0;
+}
+#adresse h2{ 
+   
+    color:grey;
+    font-size:4rem;
+    font-family:"fairplay display";
+    text-align:center;
+ }
+#adresse p{
+    font-family:"fairplay display";
+    font-size: 2.4rem;
+    color:grey;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.tel, .mail{
+    color:grey;
+    display:flex;
+    justify-content:center;
+    text-decoration:none;}
+
+/*rupture*/
+@media (max-width:768px){
+article.hippo{opacity:1;}
+ section.galerie {
+overflow:auto;}
+section.histoire{ 
+height:30vh;
+width:100%; }
+}
+
+@media (max-width: 480px){
+    /*---- hero*/
+    .wrapper{display:block;}
+    nav.menu{margin-bottom:2rem;}
+    section.oui{display:block;}
+    .corail, article.hippo{
+        width: 100%;
+        opacity:1;
+    }
+
+    article.hippo h2{ font-size:3rem; }
+    /*---- histoire*/
+    section.histoire{
+        font-size:2rem;
+        width:100%;
+        height:60vh;
+    }
+
+    article.histoire h1{text-align: left;}
+    /*---- photos*/
+    section.galerie {
+    display:flex;
+    flex-direction: column;
+ object-fit: cover;
+ padding-top:20rem;}
+    section.galerie > img{
+    width: 100% !important;
+    }
+    footer#adresse{
+    padding-top:60rem;
+    padding-bottom:20rem;
+    }
+}/*accolade fin point de rupture*/
